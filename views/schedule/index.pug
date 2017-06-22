@@ -1,0 +1,38 @@
+extends ../layout
+
+block styles
+
+block content
+  .container-fluid
+    .row
+      .col-md-6
+        .card.card-calendar
+          .card-content
+            full-calendar(:events="events", default-view='month', :header='header', eventLimit="true")
+      .col-md-6
+        .card.card-calendar
+          .card-content
+            full-calendar(:events="events", default-view='agendaWeek', :header='header', eventLimit="true")
+    .row
+      .col-md-6
+        .card
+          .card-content
+            .table-responsive
+              table.table
+                thead
+                  tr
+                    th.text-center #
+                    th Task Name
+                    th.text-center Par
+                    th Date Time
+                tbody
+                  tr(v-for="task in tasks", :key="task.id")
+                    td.text-center {{task.id}}
+                    td {{task.name}}
+                    td.text-center {{task.par}}
+                    td {{task.dateTime}}
+
+block scripts
+  // Full Calendar Plugin
+  script(src='/vendor/fullcalendar/fullcalendar.min.js')
+  script(src='/assets/js/components/fullcalendar.js')
