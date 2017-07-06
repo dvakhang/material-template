@@ -163,7 +163,7 @@
   }
 
   /*
-   * Set hover, active and focus-states for buttons (source: http://www.sitepoint.com/javascript-generate-lighter-darker-color)
+   * Set hover, active and focus-states for buttons (source: https://www.sitepoint.com/javascript-generate-lighter-darker-color)
    */
   var colorLuminance = function (hex, lum) {
     // Validate hex string
@@ -311,7 +311,7 @@
 
     // place cursor at end of text in text input
     if (input.type !== 'file') {
-      // http://stackoverflow.com/a/2345915/1331425
+      // https://stackoverflow.com/a/2345915/1331425
       var val = input.value
       input.value = ''
       input.value = val
@@ -379,7 +379,7 @@
   }
 
   var fireClick = function (node) {
-    // Taken from http://www.nonobtrusive.com/2011/11/29/programatically-fire-crossbrowser-click-event-with-javascript/
+    // Taken from https://www.nonobtrusive.com/2011/11/29/programatically-fire-crossbrowser-click-event-with-javascript/
     // Then fixed for today's Chrome browser.
     if (typeof MouseEvent === 'function') {
       // Up-to-date approach
@@ -743,7 +743,7 @@
     }
   }
 
-  // Fix iOS scrolling http://stackoverflow.com/q/39626302/1331425
+  // Fix iOS scrolling https://stackoverflow.com/q/39626302/1331425
   function iOSfix () {
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
     if (iOS && !hasClass(document.body, swalClasses.iosfix)) {

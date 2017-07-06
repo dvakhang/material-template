@@ -66,14 +66,14 @@ window.app = new Vue({
             //         title: 'Click for Creative Tim',
             //         start: new Date(y, m, 21),
             //         end: new Date(y, m, 22),
-            //         url: 'http://dounets.com/',
+            //         url: 'https://dounets.com/',
             //         className: 'event-orange'
             //     },
             //     {
             //         title: 'Click for Google',
             //         start: new Date(y, m, 21),
             //         end: new Date(y, m, 22),
-            //         url: 'http://dounets.com/',
+            //         url: 'https://dounets.com/',
             //         className: 'event-orange'
             //     }
             // ],
@@ -158,14 +158,14 @@ function initFullCalendar() {
             title: 'Click for Creative Tim',
             start: new Date(y, m, 21),
             end: new Date(y, m, 22),
-            url: 'http://dounets.com/',
+            url: 'https://dounets.com/',
             className: 'event-orange'
         },
         {
             title: 'Click for Google',
             start: new Date(y, m, 21),
             end: new Date(y, m, 22),
-            url: 'http://dounets.com/',
+            url: 'https://dounets.com/',
             className: 'event-orange'
         }
     ];

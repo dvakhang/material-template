@@ -3888,7 +3888,7 @@ var GlobalEmitter = Class.extend(ListenerMixin, EmitterMixin, {
 
 		// attach a handler to get called when ANY scroll action happens on the page.
 		// this was impossible to do with normal on/off because 'scroll' doesn't bubble.
-		// http://stackoverflow.com/a/32954565/96342
+		// https://stackoverflow.com/a/32954565/96342
 		window.addEventListener(
 			'scroll',
 			this.handleScrollProxy = function(ev) {
