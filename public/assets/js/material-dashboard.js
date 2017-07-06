@@ -4,7 +4,7 @@
  *
  * =========================================================
  *
- * Copyright 2016 Creative Tim (http://dounets.com/product/material-dashboard-pro)
+ * Copyright 2016 Creative Tim (https://dounets.com/product/material-dashboard-pro)
  *
  *
  *                       _oo0oo_

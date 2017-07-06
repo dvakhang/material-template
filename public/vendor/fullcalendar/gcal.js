@@ -90,7 +90,7 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 	}
 
 	if (!apiKey) {
-		reportError("Specify a googleCalendarApiKey. See http://fullcalendar.io/docs/google_calendar/");
+		reportError("Specify a googleCalendarApiKey. See https://fullcalendar.io/docs/google_calendar/");
 		return {}; // an empty source to use instead. won't fetch anything.
 	}
 

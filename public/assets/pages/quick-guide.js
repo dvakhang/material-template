@@ -85,7 +85,7 @@ insertChat("you", "1. Manual Document<br> 2. Video<br> 3. Step by Step",7000);
 insertChat("me", "2. Video", 9500);
 insertChat("you", "1. OEM B/L Entry<br> Video play", 12000);
 insertChat("me", "How to add a Container List?", 14500);
-insertChat("you", "Please click the <a href='http://lmgtfy.com/?q=yaaaaaaahooooooooooooo'>Link</a>", 17000);
+insertChat("you", "Please click the <a href='https://lmgtfy.com/?q=yaaaaaaahooooooooooooo'>Link</a>", 17000);
 
 
 //-- NOTE: No use time on insertChat.
