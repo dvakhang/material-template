@@ -5,8 +5,8 @@ block styles
 block content
   .container-fluid
     .row
-      .col-md-4
-      .col-md-4
+      .col-md-2
+      .col-md-8
         .card
           .card-header.clearfix
             .row
@@ -18,7 +18,7 @@ block content
                         .customer-input.form-group.is-empty(v-if="isShowCustomerInput")
                             input.form-control(placeholder="Just say what you want...")
                             span.material-input
-                .col-md-2
+                .col-md-2.text-right
                     button.btn.btn-just-icon.btn-info(@click="onCustomerClick()")
                         i.fa.fa-user-circle
           .card-content
@@ -55,4 +55,4 @@ block content
             .col-md-12
                 button.btn.btn-info.btn-block
                     | Report 
-      .col-md-4 
+      .col-md-2 
