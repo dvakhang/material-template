@@ -11,8 +11,8 @@ const ENV = {
   TEST: 'test',
 };
 
-const PORT = 8080;
-const TEST_PORT = 8000;
+const PORT = 8081;
+const TEST_PORT = 8001;
 
 const ROUTES = {
   ROOT: '/',
@@ -25,6 +25,7 @@ const ROUTES = {
   SCHEDULE: '/schedule',
   WORK_RESULT: '/work-result',
   RANKING: '/ranking',
+  WORK_HISTORY: '/work-history',
   HELP: '/help',
   COMMUNITY: '/community',
   QUICK_GUIDE: '/quick-guide',
