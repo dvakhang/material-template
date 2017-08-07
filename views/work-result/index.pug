@@ -112,42 +112,45 @@ block content
               .col-md-3
                 .radio.radio-inline
                   label HOLD IN ONE
-                    input(type="radio", name="option1")
+                    input(type="radio", v-model="image", name="option1", value = 1, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label ALBATROSS
-                    input(type="radio", name="option1")
+                    input(type="radio", v-model="image", name="option1", value = 4, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label EAGLE
-                    input(type="radio", name="option1")
+                    input(type="radio", v-model="image", name="option1", value = 5, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label BIRDY
-                    input(type="radio", name="option1")
+                    input(type="radio", v-model="image", name="option1", value = 6, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label PAR
-                    input(type="radio", name="option1")
+                    input(type="radio", v-model="image", name="option1", value = 2, @change="onChangeRadio")
             .row
               .col-md-3
                 .radio.radio-inline
                   label BOGEY
-                    input(type="radio", name="option2")
+                    input(type="radio", v-model="image", name="option1", value = 8, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label Double Bogey
-                    input(type="radio", name="option2")
+                    input(type="radio", v-model="image", name="option1", value = 9, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label Triple Bogey
-                    input(type="radio", name="option2")
+                    input(type="radio", v-model="image", name="option1", value = 3, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label Quadruple Bogey
-                    input(type="radio", name="option2")
+                    input(type="radio", v-model="image", name="option1", value = 10, @change="onChangeRadio")
               .col-md-2
                 .radio.radio-inline
                   label Double Par
-                    input(type="radio", name="option2")
+                    input(type="radio", v-model="image", name="option1", value = 11, @change="onChangeRadio")
+          .row.card.card-pricing.card-raised
+              .content
+                .icon.icon-rose(id="img")
 block scripts
