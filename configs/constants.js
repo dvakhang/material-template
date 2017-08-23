@@ -11,8 +11,8 @@ const ENV = {
   TEST: 'test',
 };
 
-const PORT = 8081;
-const TEST_PORT = 8001;
+const PORT = 8082;
+const TEST_PORT = 8002;
 
 const ROUTES = {
   ROOT: '/',
@@ -32,6 +32,9 @@ const ROUTES = {
   REWARD: '/reward',
   KEYWORD_SEARCH: '/keyword-search',
   TIC_BOARD: '/tic-board',
+  PROCESS_TYPE: '/process-type',
+  CUMULATIVE: '/cumulative',
+  TEST_GOLF_GAME : '/test-golf-game'
 };
 
 module.exports = {

@@ -51,6 +51,7 @@
     "sinon": "^2.3.2",
     "sinon-mongoose": "^2.0.2",
     "validator": "^7.0.0",
-    "vue-full-calendar": "^2.0.2"
+    "vue-full-calendar": "^2.0.2",
+    "xml2js": "^0.4.18"
   }
 }
