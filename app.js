@@ -24,6 +24,7 @@ const expressStatusMonitor = require('express-status-monitor');
 const sass = require('node-sass-middleware');
 const chalk = require('chalk');
 const seeder = require('./helpers/seeder');
+const fs = require('fs');
 const routes = require('./routes');
 const { showLogs } = require('./helpers');
 const { SIGN_IN, SIGN_UP, SIGN_OUT, ACCOUNT } = require('./configs/constants').ROUTES;
@@ -64,6 +65,12 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI, (error) =>
   // Feed some data in DB
   seeder.createUsers();
 });
+
+//Khang.Dong(S)
+fs.readdirSync(__dirname + '/models').forEach((filename) => {
+  if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename);
+});
+//Khang.Dong(E)
 
 /**
  * Express configuration.
