@@ -72,7 +72,6 @@ router.get(TIC_BOARD, ticBoardController.getIndex);
 router.get(QUICK_GUIDE, quickGuideController.getIndex);
 
 //process type
-
 router.get(LEAD_TIME, leadTimeController.getIndex)
 router.get('/getleadtime', leadTimeController.getProcess)
 // router.route('/api/addProcess')

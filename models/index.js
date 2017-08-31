@@ -8,6 +8,7 @@ var opts = {
     }
 }
 process.env.DATABASE_URI = 'mysql://gamification:123789@10.0.14.199:3306/gamification-fwd';
+
 const sequelize = new Sequelize(process.env.DATABASE_URI, opts);
 
 const User = sequelize.import(path.join(__dirname, 'User.js'));
