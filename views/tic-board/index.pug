@@ -8,188 +8,23 @@ block content
             .card
                 .card-content
                     #colouredBarsChart.ct-chart
-                        svg.ct-chart-line(width='100%', height='300px', style='width: 100%; height: 300px;')
-                            g.ct-grids
-                                line.ct-grid.ct-vertical(y1='265', y2='265', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='240', y2='240', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='215', y2='215', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='190', y2='190', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='165', y2='165', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='140', y2='140', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='115', y2='115', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='90', y2='90', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='65', y2='65', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='40', y2='40', x1='50', x2='906')
-                                line.ct-grid.ct-vertical(y1='15', y2='15', x1='50', x2='906')
-                            g.ct-series.ct-series-a
-                                path.ct-line(d='M 50 193.25 C 64.267 189.167 107.067 177.208 135.6 168.75 C 164.133 160.292 192.667 149.542 221.2 142.5 C 249.733 135.458 278.267 130.5 306.8 126.5 C 335.333 122.5 363.867 124.5 392.4 118.5 C 420.933 112.5 449.467 95.042 478 90.5 C 506.533 85.958 535.067 93.5 563.6 91.25 C 592.133 89 620.667 80.875 649.2 77 C 677.733 73.125 706.267 71.917 734.8 68 C 763.333 64.083 791.867 60 820.4 53.5 C 848.933 47 891.733 33.083 906 29')
-                                line.ct-point(x1='50', y1='193.25', x2='50.01', y2='193.25', value='287', opacity='1')
-                                line.ct-point(x1='135.6', y1='168.75', x2='135.60999999999999', y2='168.75', value='385', opacity='1')
-                                line.ct-point(x1='221.2', y1='142.5', x2='221.20999999999998', y2='142.5', value='490', opacity='1')
-                                line.ct-point(x1='306.79999999999995', y1='126.5', x2='306.80999999999995', y2='126.5', value='554', opacity='1')
-                                line.ct-point(x1='392.4', y1='118.5', x2='392.40999999999997', y2='118.5', value='586', opacity='1')
-                                line.ct-point(x1='478', y1='90.5', x2='478.01', y2='90.5', value='698', opacity='1')
-                                line.ct-point(x1='563.5999999999999', y1='91.25', x2='563.6099999999999', y2='91.25', value='695', opacity='1')
-                                line.ct-point(x1='649.1999999999999', y1='77', x2='649.2099999999999', y2='77', value='752', opacity='1')
-                                line.ct-point(x1='734.8', y1='68', x2='734.81', y2='68', value='788', opacity='1')
-                                line.ct-point(x1='820.4', y1='53.5', x2='820.41', y2='53.5', value='846', opacity='1')
-                                line.ct-point(x1='906', y1='29', x2='906.01', y2='29', value='944', opacity='1')
-                            g.ct-series.ct-series-b
-                                path.ct-line(d='M 50 248.25 C 64.267 244.708 107.067 230.167 135.6 227 C 164.133 223.833 192.667 234.875 221.2 229.25 C 249.733 223.625 278.267 201.25 306.8 193.25 C 335.333 185.25 363.867 187.417 392.4 181.25 C 420.933 175.083 449.467 160.5 478 156.25 C 506.533 152 535.067 160.083 563.6 155.75 C 592.133 151.417 620.667 134.625 649.2 130.25 C 677.733 125.875 706.267 129.708 734.8 129.5 C 763.333 129.292 791.867 133.375 820.4 129 C 848.933 124.625 891.733 107.542 906 103.25')
-                                line.ct-point(x1='50', y1='248.25', x2='50.01', y2='248.25', value='67', opacity='1')
-                                line.ct-point(x1='135.6', y1='227', x2='135.60999999999999', y2='227', value='152', opacity='1')
-                                line.ct-point(x1='221.2', y1='229.25', x2='221.20999999999998', y2='229.25', value='143', opacity='1')
-                                line.ct-point(x1='306.79999999999995', y1='193.25', x2='306.80999999999995', y2='193.25', value='287', opacity='1')
-                                line.ct-point(x1='392.4', y1='181.25', x2='392.40999999999997', y2='181.25', value='335', opacity='1')
-                                line.ct-point(x1='478', y1='156.25', x2='478.01', y2='156.25', value='435', opacity='1')
-                                line.ct-point(x1='563.5999999999999', y1='155.75', x2='563.6099999999999', y2='155.75', value='437', opacity='1')
-                                line.ct-point(x1='649.1999999999999', y1='130.25', x2='649.2099999999999', y2='130.25', value='539', opacity='1')
-                                line.ct-point(x1='734.8', y1='129.5', x2='734.81', y2='129.5', value='542', opacity='1')
-                                line.ct-point(x1='820.4', y1='129', x2='820.41', y2='129', value='544', opacity='1')
-                                line.ct-point(x1='906', y1='103.25', x2='906.01', y2='103.25', value='647', opacity='1')
-                            g.ct-labels
-                                foreignobject(style='overflow: visible;', x='50', y='270', width='85.6', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') AM 09
-                                foreignobject(style='overflow: visible;', x='135.6', y='270', width='85.6', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') AM 10
-                                foreignobject(style='overflow: visible;', x='221.2', y='270', width='85.59999999999997', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') AM 11
-                                foreignobject(style='overflow: visible;', x='306.79999999999995', y='270', width='85.60000000000002', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') AM 12
-                                foreignobject(style='overflow: visible;', x='392.4', y='270', width='85.60000000000002', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') PM 01
-                                foreignobject(style='overflow: visible;', x='478', y='270', width='85.59999999999991', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') PM 02
-                                foreignobject(style='overflow: visible;', x='563.5999999999999', y='270', width='85.60000000000002', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') PM 03
-                                foreignobject(style='overflow: visible;', x='649.1999999999999', y='270', width='85.60000000000002', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') PM 04
-                                foreignobject(style='overflow: visible;', x='734.8', y='270', width='85.60000000000002', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') PM 05
-                                foreignobject(style='overflow: visible;', x='819.8', y='270', width='85.60000000000002', height='20')
-                                    span.ct-label.ct-horizontal.ct-end(style='width: 86px; height: 20px') PM 06
-                                
-                                foreignobject(style='overflow: visible;', y='240', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 0
-                                foreignobject(style='overflow: visible;', y='215', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 1000
-                                foreignobject(style='overflow: visible;', y='190', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 2000
-                                foreignobject(style='overflow: visible;', y='165', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 3000
-                                foreignobject(style='overflow: visible;', y='140', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 4000
-                                foreignobject(style='overflow: visible;', y='115', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 5000
-                                foreignobject(style='overflow: visible;', y='90', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 6000
-                                foreignobject(style='overflow: visible;', y='65', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 7000
-                                foreignobject(style='overflow: visible;', y='40', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 8000
-                                foreignobject(style='overflow: visible;', y='15', x='10', height='25', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 25px; width: 30px') 9000
-                                foreignobject(style='overflow: visible;', y='-15', x='10', height='30', width='30')
-                                    span.ct-label.ct-vertical.ct-start(style='height: 30px; width: 30px') 10000
                     .card-footer
                         i.fa.fa-circle.text-info
                         |  Me
+                        |
                         i.fa.fa-circle.text-danger
                         |  Member Avg.
-
         .col-md-12
             .card
                 .card-content
                     .col-md-8
-                        #multipleBarsChart.ct-chart
-                            svg.ct-chart-bar(width='100%', height='300px', style='width: 100%; height: 300px;')
-                                g.ct-grids
-                                    line.ct-grid.ct-vertical(y1='265', y2='265', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='237.22222222222223', y2='237.22222222222223', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='209.44444444444446', y2='209.44444444444446', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='181.66666666666669', y2='181.66666666666669', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='153.88888888888889', y2='153.88888888888889', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='126.11111111111111', y2='126.11111111111111', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='98.33333333333334', y2='98.33333333333334', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='70.55555555555554', y2='70.55555555555554', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='42.77777777777777', y2='42.77777777777777', x1='50', x2='770')
-                                    line.ct-grid.ct-vertical(y1='15', y2='15', x1='50', x2='770')
-                                g.ct-series.ct-series-a
-                                    line.ct-bar(x1='75', x2='75', y1='265', y2='114.44444444444446', value='542', opacity='1')
-                                    line.ct-bar(x1='135', x2='135', y1='265', y2='141.94444444444446', value='443', opacity='1')
-                                    line.ct-bar(x1='195', x2='195', y1='265', y2='176.11111111111111', value='320', opacity='1')
-                                    line.ct-bar(x1='255', x2='255', y1='265', y2='48.33333333333334', value='780', opacity='1')
-                                    line.ct-bar(x1='315', x2='315', y1='265', y2='111.38888888888889', value='553', opacity='1')
-                                    line.ct-bar(x1='375', x2='375', y1='265', y2='139.16666666666669', value='453', opacity='1')
-                                    line.ct-bar(x1='435', x2='435', y1='265', y2='174.44444444444446', value='326', opacity='1')
-                                    line.ct-bar(x1='495', x2='495', y1='265', y2='144.44444444444446', value='434', opacity='1')
-                                    line.ct-bar(x1='555', x2='555', y1='265', y2='107.22222222222223', value='568', opacity='1')
-                                    line.ct-bar(x1='615', x2='615', y1='265', y2='95.55555555555554', value='610', opacity='1')
-                                    line.ct-bar(x1='675', x2='675', y1='265', y2='55', value='756', opacity='1')
-                                    line.ct-bar(x1='735', x2='735', y1='265', y2='16.388888888888886', value='895', opacity='1')
-                                g.ct-series.ct-series-b
-                                    line.ct-bar(x1='85', x2='85', y1='265', y2='150.55555555555554', value='412', opacity='1')
-                                    line.ct-bar(x1='145', x2='145', y1='265', y2='197.5', value='243', opacity='1')
-                                    line.ct-bar(x1='205', x2='205', y1='265', y2='187.22222222222223', value='280', opacity='1')
-                                    line.ct-bar(x1='265', x2='265', y1='265', y2='103.88888888888889', value='580', opacity='1')
-                                    line.ct-bar(x1='325', x2='325', y1='265', y2='139.16666666666669', value='453', opacity='1')
-                                    line.ct-bar(x1='385', x2='385', y1='265', y2='166.94444444444446', value='353', opacity='1')
-                                    line.ct-bar(x1='445', x2='445', y1='265', y2='181.66666666666669', value='300', opacity='1')
-                                    line.ct-bar(x1='505', x2='505', y1='265', y2='163.88888888888889', value='364', opacity='1')
-                                    line.ct-bar(x1='565', x2='565', y1='265', y2='162.77777777777777', value='368', opacity='1')
-                                    line.ct-bar(x1='625', x2='625', y1='265', y2='151.11111111111111', value='410', opacity='1')
-                                    line.ct-bar(x1='685', x2='685', y1='265', y2='88.33333333333334', value='636', opacity='1')
-                                    line.ct-bar(x1='745', x2='745', y1='265', y2='71.94444444444446', value='695', opacity='1')
-                                g.ct-labels
-                                    foreignobject(style='overflow: visible;', x='50', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Jan
-                                    foreignobject(style='overflow: visible;', x='110', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Feb
-                                    foreignobject(style='overflow: visible;', x='170', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Mar
-                                    foreignobject(style='overflow: visible;', x='230', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Apr
-                                    foreignobject(style='overflow: visible;', x='290', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Mai
-                                    foreignobject(style='overflow: visible;', x='350', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Jun
-                                    foreignobject(style='overflow: visible;', x='410', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Jul
-                                    foreignobject(style='overflow: visible;', x='470', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Aug
-                                    foreignobject(style='overflow: visible;', x='530', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Sep
-                                    foreignobject(style='overflow: visible;', x='590', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Oct
-                                    foreignobject(style='overflow: visible;', x='650', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Nov
-                                    foreignobject(style='overflow: visible;', x='710', y='270', width='60', height='20')
-                                        span.ct-label.ct-horizontal.ct-end(style='width: 60px; height: 20px') Dec
-                                    foreignobject(style='overflow: visible;', y='237.22222222222223', x='10', height='27.77777777777778', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 0
-                                    foreignobject(style='overflow: visible;', y='209.44444444444446', x='10', height='27.77777777777778', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 100
-                                    foreignobject(style='overflow: visible;', y='181.66666666666669', x='10', height='27.77777777777777', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 200
-                                    foreignobject(style='overflow: visible;', y='153.8888888888889', x='10', height='27.777777777777786', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 300
-                                    foreignobject(style='overflow: visible;', y='126.11111111111111', x='10', height='27.77777777777777', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 400
-                                    foreignobject(style='overflow: visible;', y='98.33333333333334', x='10', height='27.77777777777777', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 500
-                                    foreignobject(style='overflow: visible;', y='70.55555555555554', x='10', height='27.7777777777778', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 600
-                                    foreignobject(style='overflow: visible;', y='42.77777777777777', x='10', height='27.77777777777777', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 700
-                                    foreignobject(style='overflow: visible;', y='15', x='10', height='27.77777777777777', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 28px; width: 30px') 800
-                                    foreignobject(style='overflow: visible;', y='-15', x='10', height='30', width='30')
-                                        span.ct-label.ct-vertical.ct-start(style='height: 30px; width: 30px') 900
+                        #multipleBarsChart.ct-chart     
                         .card-footer
-                            i.fa.fa-circle.text-info
-                            |  Me
-                            i.fa.fa-circle.text-danger
-                            |  Member Avg.                
+                        i.fa.fa-circle.text-info
+                        |  Me
+                        |
+                        i.fa.fa-circle.text-danger
+                        |  Member Avg.         
                     .col-md-4
                         .row
                             .col-md-3(style="margin-top:5px;")

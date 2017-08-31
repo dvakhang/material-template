@@ -5,8 +5,10 @@
  * @param {*} res 
  */
 const getIndex = (req, res) => {
-  const model = {};
-  res.render('home/index', model);
+  const model = {
+    title: 'Notice Game Result'
+  };
+  res.render('notice-game-result/index', model);
 };
 
 module.exports = {

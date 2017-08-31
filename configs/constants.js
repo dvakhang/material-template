@@ -17,7 +17,7 @@ const TEST_PORT = 8002;
 const ROUTES = {
   ROOT: '/',
   DASHBOARD: '/dashboard',
-  SIGN_IN: '/signin',
+  SIGN_IN: '/auth/signin',
   SIGN_UP: '/signup',
   SIGN_OUT: '/signout',
   FORGOT: '/forgot',
@@ -32,9 +32,11 @@ const ROUTES = {
   REWARD: '/reward',
   KEYWORD_SEARCH: '/keyword-search',
   TIC_BOARD: '/tic-board',
-  PROCESS_TYPE: '/process-type',
-  CUMULATIVE: '/cumulative',
-  TEST_GOLF_GAME : '/test-golf-game'
+  LEAD_TIME: '/lead-time',
+  CFD_TABLE: '/cfd-table',
+  TEST_GOLF_GAME : '/test-golf-game',
+  NOTICE_HOLE_RESULT: '/notice-hole-result',
+  NOTICE_GAME_RESULT: '/notice-game-result'
 };
 
 module.exports = {

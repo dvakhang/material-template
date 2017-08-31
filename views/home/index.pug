@@ -1,1 +1,60 @@
-p HELLO WORLD
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='apple-touch-icon', sizes='76x76', href='/assets/img/apple-icon.png')
+    link(rel='icon', type='image/png', href='/assets/img/favicon.png')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title #{title} - Gamification - DOU Networks
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    meta(name='viewport', content='width=device-width')
+
+    include ../partials/styles
+  body
+    .wrapper
+        #app.content
+            .container-fluid
+                .card
+                    .card-content.text-center
+                        .col-md-6.col-md-offset-3
+                            .row 
+                                .col-md-6
+                                    .card
+                                        .card-header.card-header-icon(data-background-color='rose')
+                                            i.material-icons contacts
+                                        .card-content
+                                            h4.card-title Horizontal Form
+                                            form.form-horizontal(id="loginform", action='/auth/signin', method='post')
+                                                .row
+                                                    label.col-md-3.label-on-left Email
+                                                    .col-md-9
+                                                        .form-group.label-floating.is-empty
+                                                            label.control-label
+                                                            input.form-control(type='email', id="email", name="email")
+                                                            span.material-input
+                                                .row
+                                                    label.col-md-3.label-on-left Password
+                                                    .col-md-9
+                                                        .form-group.label-floating.is-empty
+                                                            label.control-label
+                                                            input.form-control(type='password', id="password", name="password")
+                                                            span.material-input
+                                                .row
+                                                    label.col-md-3
+                                                    .col-md-9
+                                                        .checkbox.form-horizontal-checkbox
+                                                            label
+                                                                input(type='checkbox', name='optionsCheckboxes')
+                                                                span.checkbox-material
+                                                                span.check
+                                                                |  Remember Me
+                                                .row
+                                                    label.col-md-3
+                                                    .col-md-9
+                                                        .form-group.form-button
+                                                            button.btn.btn-fill.btn-rose(type='submit') Sign in
+  include ../partials/scripts
+    script(src='/assets/pages/home.js')
+    
+

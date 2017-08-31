@@ -1,0 +1,56 @@
+extends ../layout
+
+block styles
+
+block content
+  .container-fluid
+    .col-md-7
+        .card
+            .card-content
+                .col-md-6
+                    h6.card-title 
+                    b 2017 CLT Champion League
+                .col-md-6.text-right
+                    h6.card-title
+                    b 2017.08.14 ~ 2017.08.18
+                .col-md-12
+                    .table-responsive
+                    table.table
+                        thead
+                            tr
+                                th.text-center Hole
+                                th.text-center Par
+                                th.text-center Distance
+                                th.text-center Score
+                                th.text-center Date
+                        tbody
+                            tr
+                                td.text-center 1
+                                td.text-center 3
+                                td.text-center 1,432
+                                td.text-center 4
+                                td.text-center 2017.08.14
+        .card
+            .card-content
+                .table-responsive
+                  table.table
+                    thead
+                        tr
+                            th.text-center Shot
+                            th.text-center Distance
+                            th.text-center Action
+                            th.text-center Location
+                    tbody
+                        tr
+                            td.text-center 1st
+                            td.text-center 2.15
+                            td.text-center Driving
+                            td.text-center Farway
+        .card
+            .card-content
+                .icon.icon-rose(id="imgLeft")
+    .col-md-5
+        .card
+            .card-content
+                .icon.icon-rose(id="imgRight")
+
