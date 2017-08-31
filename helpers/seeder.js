@@ -6,7 +6,7 @@
  */
 
 const _ = require('lodash');
-const User = require('../models/user');
+const User = require('../models/usermongo');
 
 const createUsers = () => {
   User.count().exec((err, count) => {

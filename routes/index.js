@@ -6,7 +6,6 @@
  */
 const express = require('express');
 const router = express.Router();
-const homeController = require('../controllers/HomeController');
 const authController = require('../controllers/AuthController');
 const dashboardController = require('../controllers/DashboardController');
 const scheduleController = require('../controllers/ScheduleController');
@@ -18,11 +17,13 @@ const quickGuideController = require('../controllers/QuickGuideController');
 const rewardController = require('../controllers/RewardController');
 const keywordSearchController = require('../controllers/KeyWordSearchController');
 const ticBoardController = require('../controllers/TicBoardController');
-const processTypeController = require('../controllers/ProcessTypeController');
-const cumulativeController = require('../controllers/CumulativeController');
+const leadTimeController = require('../controllers/LeadTimeController');
+const cfdTableController = require('../controllers/CfdTableController');
 const testGolfGameController = require('../controllers/TestGolfGameController');
+const noticeHoleResultController = require('../controllers/NoticeHoleResultController');
+const noticeGameResultController = require('../controllers/NoticeGameResultController');
 const { ROOT, SIGN_IN, SIGN_OUT, DASHBOARD, SCHEDULE, WORK_RESULT, RANKING, WORK_HISTORY,
-    COMMUNITY, REWARD, KEYWORD_SEARCH, TIC_BOARD, QUICK_GUIDE, PROCESS_TYPE, CUMULATIVE, TEST_GOLF_GAME } =
+    COMMUNITY, REWARD, KEYWORD_SEARCH, TIC_BOARD, QUICK_GUIDE, LEAD_TIME, CFD_TABLE, TEST_GOLF_GAME, NOTICE_HOLE_RESULT, NOTICE_GAME_RESULT } =
     require('../configs/constants').ROUTES;
 
 /**
@@ -31,10 +32,13 @@ const { ROOT, SIGN_IN, SIGN_OUT, DASHBOARD, SCHEDULE, WORK_RESULT, RANKING, WORK
 const passportConfig = require('../configs/passport');
 const RequireAuthenticated = passportConfig.isAuthenticated;
 
-router.get(ROOT, homeController.getIndex);
+router.get(ROOT, authController.getSignIn);
 
-router.get(SIGN_IN, authController.getSignIn);
-router.post(SIGN_IN, authController.postSignIn);
+// router.get(SIGN_IN, authController.getSignIn);
+// router.post(SIGN_IN, authController.postSignIn);
+router.route(SIGN_IN)
+    .get(authController.getSignIn)
+    .post(authController.postSignIn);   
 router.get(SIGN_OUT, authController.signOut);
 
 // Dashboard
@@ -68,15 +72,16 @@ router.get(TIC_BOARD, ticBoardController.getIndex);
 router.get(QUICK_GUIDE, quickGuideController.getIndex);
 
 //process type
-router.get(PROCESS_TYPE, processTypeController.getIndex)
-router.get('/getprocesstype', processTypeController.getProcess)
-router.route('/api/addProcess')
-    .get(processTypeController.addProcess)
-    .post(processTypeController.addProcess);
+
+router.get(LEAD_TIME, leadTimeController.getIndex)
+router.get('/getleadtime', leadTimeController.getProcess)
+// router.route('/api/addProcess')
+//     .get(leadTimeController.addProcess)
+//     .post(leadTimeController.addProcess);
 
 //Cumulative
-router.get(CUMULATIVE, cumulativeController.getIndex);
-router.get('/getCumulative', cumulativeController.getCumulative);
+router.get(CFD_TABLE, cfdTableController.getIndex);
+router.get('/getCfdTable', cfdTableController.getCumulative);
 
 //Test Gold Game
 router.get(TEST_GOLF_GAME, testGolfGameController.getIndex);
@@ -88,5 +93,12 @@ router.route('/api/getUpdateLevels')
     .post(testGolfGameController.getUpdateLevels);
 router.route('/api/getPlayGame')
     .get(testGolfGameController.getPlayGame)
-    .post(testGolfGameController.getPlayGame);    
+    .post(testGolfGameController.getPlayGame);   
+    
+// Notice Hole Result
+router.get(NOTICE_HOLE_RESULT, noticeHoleResultController.getIndex);
+
+//Notice Game Result
+router.get(NOTICE_GAME_RESULT, noticeGameResultController.getIndex);
+
 module.exports = router;

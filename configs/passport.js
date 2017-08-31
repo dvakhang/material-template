@@ -10,7 +10,7 @@ const passport = require('passport');
 const request = require('request');
 const LocalStrategy = require('passport-local').Strategy;
 
-const User = require('../models/user');
+const User = require('../models/usermongo');
 const secretOrKey = 'X9Asjkls078a8790aldsf7lkaw2';
 
 passport.serializeUser((user, done) => {
