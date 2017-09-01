@@ -10,10 +10,16 @@ const request = require('request-promise');
 //const mongoose = require('mongoose');
 
 const getIndex = (req, res) => {
-    const model = {
-        title: 'Lead Time'
-    };
-    res.render('lead-time/index', model);
+    if (req.user) {
+        const model = {
+            title: 'Lead Time'
+        };
+        res.render('lead-time/index', model);
+    } else {
+        res.render('home/index', {
+            title: 'Sign In'
+        });
+    }
 };
 
 const getProcess = (req, res) => {

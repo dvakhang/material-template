@@ -4,10 +4,16 @@ const bcrypt = require('bcrypt-nodejs');
 const request = require('request-promise')
 
 const getIndex = (req, res) => {
-    const model = {
-        title: 'CFD Table'
-    };
-    res.render('cfd-table/index', model);
+    if (req.user) {
+        const model = {
+            title: 'CFD Table'
+        };
+        res.render('cfd-table/index', model);
+    } else {
+        res.render('home/index', {
+            title: 'Sign In'
+        });
+    }
 };
 
 const getCumulative = (req, res) => {

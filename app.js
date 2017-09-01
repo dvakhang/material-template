@@ -15,6 +15,7 @@ const lusca = require('lusca');
 const dotenv = require('dotenv');
 const logger = require('morgan');
 const MongoStore = require('connect-mongo')(session);
+const MySQLStore = require('express-mysql-session')(session);
 const flash = require('express-flash');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -92,15 +93,41 @@ app.use(expressValidator({
     },
   },
 }));
+// app.use(session({
+//   resave: true,
+//   saveUninitialized: true,
+//   secret: process.env.SESSION_SECRET,
+//   store: new MongoStore({
+//     url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
+//     autoReconnect: true
+//   })
+// }));
+//session mysql
+let options = {
+  host: '10.0.14.199',
+  port: 3306,
+  user: 'gamification',
+  password: '123789',
+  database: 'gamification-fwd',
+  schema: {
+		tableName: 'session',
+		columnNames: {
+			session_id: 'session_id',
+			expires: 'expires',
+			data: 'data'
+		}
+	}
+};
+
+let sessionStore = new MySQLStore(options);
+
 app.use(session({
-  resave: true,
-  saveUninitialized: true,
   secret: process.env.SESSION_SECRET,
-  store: new MongoStore({
-    url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
-    autoReconnect: true
-  })
+  store: sessionStore,
+  resave: true,
+  saveUninitialized: true
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());

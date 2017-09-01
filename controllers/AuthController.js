@@ -8,7 +8,7 @@ const async = require('async');
 const crypto = require('crypto');
 const passport = require('passport');
 const User = require('../models/usermongo');
-const { ROOT, SIGN_IN , DASHBOARD } = require('../configs/constants').ROUTES;
+const { ROOT, SIGN_IN, DASHBOARD } = require('../configs/constants').ROUTES;
 
 /**
  * GET /signin
@@ -17,11 +17,11 @@ const { ROOT, SIGN_IN , DASHBOARD } = require('../configs/constants').ROUTES;
 const getSignIn = (req, res) => {
   if (req.user) {
     return res.redirect('/dashboard');
+  } else {
+    res.render('home/index', {
+      title: 'Sign In'
+    });
   }
-  // res.render('home/index', {
-  //   title: 'Sign In'
-  // });
-  return res.redirect('/dashboard');
 };
 
 /**
@@ -50,7 +50,6 @@ const postSignIn = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      console.log(req.session.returnTo || ROOT || DASHBOARD)
       req.flash('success', { msg: 'Success! You are logged in.' });
       res.redirect(DASHBOARD);
       //res.redirect(req.session.returnTo || ROOT);
