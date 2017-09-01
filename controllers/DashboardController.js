@@ -5,10 +5,16 @@
  * @param {*} res 
  */
 const getIndex = (req, res) => {
-  const model = {
-    title: 'Dashboard'
-  };
-  res.render('dashboard/index', model);
+  if (req.user) {
+    const model = {
+      title: 'Dashboard'
+    };
+    res.render('dashboard/index', model);
+  } else {
+    res.render('home/index', {
+      title: 'Sign In'
+    });
+  }
 };
 
 module.exports = {

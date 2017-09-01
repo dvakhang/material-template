@@ -7,10 +7,16 @@
 const request = require('request-promise')
 
 const getIndex = (req, res) => {
-  const model = {
-    title: 'Test Golf Game'
-  };
-  res.render('test-golf-game/index', model);
+  if (req.user) {
+    const model = {
+      title: 'Test Golf Game'
+    };
+    res.render('test-golf-game/index', model);
+  } else {
+    res.render('home/index', {
+      title: 'Sign In'
+    });
+  }
 };
 
 const getLevels = (req, res, next) => {

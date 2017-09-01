@@ -5,10 +5,16 @@
  * @param {*} res 
  */
 const getIndex = (req, res) => {
-  const model = {
-    title: 'Work History'
-  };
-  res.render('work-history/index', model);
+  if (req.user) {
+    const model = {
+      title: 'Work History'
+    };
+    res.render('work-history/index', model);
+  } else {
+    res.render('home/index', {
+      title: 'Sign In'
+    });
+  }
 };
 
 module.exports = {
