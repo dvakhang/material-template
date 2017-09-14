@@ -93,39 +93,14 @@ app.use(expressValidator({
     },
   },
 }));
-// app.use(session({
-//   resave: true,
-//   saveUninitialized: true,
-//   secret: process.env.SESSION_SECRET,
-//   store: new MongoStore({
-//     url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
-//     autoReconnect: true
-//   })
-// }));
-//session mysql
-let options = {
-  host: '10.0.14.199',
-  port: 3306,
-  user: 'gamification',
-  password: '123789',
-  database: 'gamification-fwd',
-  schema: {
-		tableName: 'session',
-		columnNames: {
-			session_id: 'session_id',
-			expires: 'expires',
-			data: 'data'
-		}
-	}
-};
-
-let sessionStore = new MySQLStore(options);
-
 app.use(session({
-  secret: process.env.SESSION_SECRET,
-  store: sessionStore,
   resave: true,
-  saveUninitialized: true
+  saveUninitialized: true,
+  secret: process.env.SESSION_SECRET,
+  store: new MongoStore({
+    url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
+    autoReconnect: true
+  })
 }));
 
 app.use(passport.initialize());
@@ -203,18 +178,9 @@ if (!String.prototype.format) {
  * Start Express server.
  */
 
-// app.listen(app.get('port'), () => {
-//   console.log('%s App is running at https://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env'));
-//   console.log('  Press CTRL-C to stop\n');
-// });
-
-const db = require('./models');
-db.sequelize.sync()
-  .then(() => {
-    app.listen(app.get('port'), () => {
-      console.log('%s App is running at https://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env'));
-      console.log('  Press CTRL-C to stop\n');
-    })
-  });
+app.listen(app.get('port'), () => {
+  console.log('%s App is running at https://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env'));
+  console.log('  Press CTRL-C to stop\n');
+});
 
 module.exports = app;
