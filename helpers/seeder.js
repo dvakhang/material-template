@@ -6,7 +6,7 @@
  */
 
 const _ = require('lodash');
-const User = require('../models/usermongo');
+const User = require('../models/user');
 
 const createUsers = () => {
   User.count().exec((err, count) => {
@@ -15,13 +15,13 @@ const createUsers = () => {
     }
 
     const admin = new User({
-      email: 'admin@ltv.vn',
+      email: 'dvakhang34@gmail.com',
       username: 'admin',
-      password: '123789',
+      password: '1',
       profile: {
         name: 'Administrator',
         gender: 'Male',
-        phone: '+84932626007',
+        phone: '+84979587892',
       },
       deleteFlag: false,
       activeFlag: true,

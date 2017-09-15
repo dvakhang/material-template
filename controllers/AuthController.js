@@ -7,7 +7,6 @@
 const async = require('async');
 const crypto = require('crypto');
 const passport = require('passport');
-const User = require('../models/usermongo');
 const { ROOT, SIGN_IN, DASHBOARD } = require('../configs/constants').ROUTES;
 
 /**
@@ -16,9 +15,11 @@ const { ROOT, SIGN_IN, DASHBOARD } = require('../configs/constants').ROUTES;
  */
 const getSignIn = (req, res) => {
   if (req.user) {
-    return res.redirect('/dashboard');
+    res.render('dashboard/index', {
+      title: 'Dash board'
+    });
   } else {
-    res.render('home/index', {
+    res.render('auth/signin/index', {
       title: 'Sign In'
     });
   }
@@ -35,7 +36,7 @@ const postSignIn = (req, res, next) => {
 
   const errors = req.validationErrors();
   if (errors) {
-    req.flash('errors', errors);
+    req.flash('info', errors[0].msg);
     return res.redirect(SIGN_IN);
   }
   passport.authenticate('local', (err, user, info) => {
@@ -43,16 +44,15 @@ const postSignIn = (req, res, next) => {
       return next(err);
     }
     if (!user) {
-      req.flash('errors', info);
+      req.flash('info', info.msg);
       return res.redirect(SIGN_IN);
     }
     req.logIn(user, (err) => {
       if (err) {
         return next(err);
       }
-      req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(DASHBOARD);
-      //res.redirect(req.session.returnTo || ROOT);
+      req.flash('info', 'Success' );
+      res.redirect(req.session.returnTo || ROOT);
     });
   })(req, res, next);
 };
@@ -62,6 +62,7 @@ const postSignIn = (req, res, next) => {
  * Sign out.
  */
 const signOut = (req, res) => {
+  console.log(new Date(1504319474));
   req.logout();
   res.redirect(ROOT);
 };

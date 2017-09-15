@@ -11,7 +11,7 @@ const ENV = {
   TEST: 'test',
 };
 
-const PORT = 8082;
+const PORT = 3030;
 const TEST_PORT = 8002;
 
 const ROUTES = {
@@ -21,22 +21,7 @@ const ROUTES = {
   SIGN_UP: '/signup',
   SIGN_OUT: '/signout',
   FORGOT: '/forgot',
-  ACCOUNT: '/account',
-  SCHEDULE: '/schedule',
-  WORK_RESULT: '/work-result',
-  RANKING: '/ranking',
-  WORK_HISTORY: '/work-history',
-  HELP: '/help',
-  COMMUNITY: '/community',
-  QUICK_GUIDE: '/quick-guide',
-  REWARD: '/reward',
-  KEYWORD_SEARCH: '/keyword-search',
-  TIC_BOARD: '/tic-board',
-  LEAD_TIME: '/lead-time',
-  CFD_TABLE: '/cfd-table',
-  TEST_GOLF_GAME : '/test-golf-game',
-  NOTICE_HOLE_RESULT: '/notice-hole-result',
-  NOTICE_GAME_RESULT: '/notice-game-result'
+  ACCOUNT: '/account'
 };
 
 module.exports = {

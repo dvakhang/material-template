@@ -10,7 +10,7 @@ const passport = require('passport');
 const request = require('request');
 const LocalStrategy = require('passport-local').Strategy;
 
-const User = require('../models/usermongo');
+const User = require('../models/user');
 const secretOrKey = 'X9Asjkls078a8790aldsf7lkaw2';
 
 passport.serializeUser((user, done) => {
@@ -27,6 +27,7 @@ passport.deserializeUser((id, done) => {
  * Sign in using Email and Password.
  */
 passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+  console.log(email);
   User.findOne({ email: email.toLowerCase() }, (err, user) => {
     if (err) {
       return done(err);

@@ -15,7 +15,6 @@ const lusca = require('lusca');
 const dotenv = require('dotenv');
 const logger = require('morgan');
 const MongoStore = require('connect-mongo')(session);
-const MySQLStore = require('express-mysql-session')(session);
 const flash = require('express-flash');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -41,7 +40,6 @@ const sassOpts = {
 
 if (env === ENV.DEV) {
   dotenv.load({ path: '.env' });
-  // sassOpts.outputStyle = 'extended';
 }
 
 if (env == ENV.TEST) {
@@ -117,6 +115,7 @@ app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.use((req, res, next) => {
   res.locals.user = req.user;
+  res.locals.info = req.flash('info');
   next();
 });
 app.use((req, res, next) => {

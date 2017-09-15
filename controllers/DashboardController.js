@@ -11,7 +11,7 @@ const getIndex = (req, res) => {
     };
     res.render('dashboard/index', model);
   } else {
-    res.render('home/index', {
+    res.render('auth/signin/index', {
       title: 'Sign In'
     });
   }
